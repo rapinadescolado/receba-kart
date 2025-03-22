@@ -1,1 +1,47 @@
-!
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RECEBA • KART</title>
+    <link rel="icon" href="assets/img/menu/logo.png">
+    <link rel="stylesheet" href="css/setup.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+    <script src="js/menu.js" defer></script>
+</head>
+
+<body>
+
+    <header class="spacebetween aligncenter">
+        <div id="header-logo" class="spacebetween aligncenter">
+            <img src="assets/img/menu/logo.png" class="fullh">
+            <h1>RECEBA • KART</h1>
+        </div>
+        <h3>Criado por Raffael Vieira</h3>
+    </header>
+
+    <main>
+        <section id="principal" class="spacebetween aligncenter">
+            
+            <div id="play" class="section-part justifycenter wrap">
+                <div id="playbutton" class="justifycenter aligncenter">
+                    <img src="assets/img/menu/logo.png">
+                    <h2 class="dark">JOGAR</h2>
+                </div>
+                <p>Quantidade de jogadores</p>
+                <div id="qtd-jogadores" class="justifycenter aligncenter wrap">
+                    <button class="dark" onclick="setPlayer(1)">1 Jogador</button>
+                    <button class="dark" onclick="setPlayer(2)">2 Jogadores</button>
+                    <button class="dark" onclick="setPlayer(3)">3 Jogadores</button>
+                    <button class="dark" onclick="setPlayer(4)">4 Jogadores</button>
+                </div>
+            </div>
+            <div id="selecao-personagem" class="section-part"></div>
+        
+        </section>
+    </main>
+
+</body>
+</html>
