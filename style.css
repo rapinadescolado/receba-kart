@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ccc;
+}
+.screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+:root {
+    --dark-1: #181818;
+    --dark-2: #272626;
+    --dark-3: #3d3b3b;
+    --fir: #f0de7d;
+    --sec: #b2df89;
+    --thi: #53753c;
+    --fou: #548377;
+}
+
+
+
+/* - - - - - Game Screen - - - - - */
+#gamescreen {
+    border: 2px solid black;
+}
+#map {
+    position: fixed;
+    width: 2000px;
+    height: 2000px;
+    background-image: url("assets/gridtexture.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+
+#top-bar {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--dark-2);
+}
+.player-card {
+    background-color: white;
+}
+
+#cameras {
+    display: grid;
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+    height: 90vh;
+    background-color: var(--dark-1);
+}
+.player-camera {
+    border: 3px solid var(--fou);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.camera-map {
+    position: relative;
+    width: 2000px;
+    height: 2000px;
+    background-image: url("assets/gridtexture.png");
+    background-repeat: repeat;
+    background-size: 100px;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+
+
+
+/* - - - - - Players - - - - - */
+.character-element {
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-color: red;
+    transform: translate(975px,975px);
+}
