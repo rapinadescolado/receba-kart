@@ -26,6 +26,7 @@ document.addEventListener("keyup",(event) => {
 //  - - - - - - - LIBRARY - - - - - - -
 var charactersList = {
     "chaves": {
+        "displayName": "Chaves",
         "acceleration": 8,
         "maxspeed": 60,
         "brakes": 10,
@@ -60,6 +61,15 @@ function Player(name,selectedCharacter,XPos,YPos) {
     this.camera = document.createElement("div");
     this.camera.classList.add("player-camera");
     cameras.appendChild(this.camera);
+    // Player Card
+    this.card = document.createElement("div");
+    this.card.innerHTML = `
+        <img class="profile-icon" src="assets/characters/${selectedCharacter}/profile-icon.png">
+        <h2>${charactersList[selectedCharacter].displayName}</h2>
+        <h3>${name}</h3>
+    `;
+    this.card.classList.add("player-card");
+    topBar.appendChild(this.card);
     // Character Element in Map
     this.characterElement = document.createElement("div");
     this.characterElement.classList = `character-element ${selectedCharacter}`;
@@ -122,12 +132,14 @@ function reloadDisplays() {
         cameras.style.gridTemplateColumns = "100%";
         cameras.style.gridTemplateRows = "100%";
     } else if (playerCount == 2) {
-        cameras.style.gridTemplateColumns = "100%";
-        cameras.style.gridTemplateRows = "50% 50%";
+        cameras.style.gridTemplateColumns = "50% 50%";
+        cameras.style.gridTemplateRows = "100%";
     } else if (playerCount >= 3) {
         cameras.style.gridTemplateColumns = "50% 50%";
         cameras.style.gridTemplateRows = "50% 50%";
     }
 }
 
-//playerList[lastID] = new Player("raffa","chaves",-50,100);
+playerList[lastID] = new Player("jogador1 sla","chaves",-50,100);
+playerList[lastID] = new Player("tome jogador 2","chaves",75,250);
+playerList[lastID] = new Player("receba 3","chaves",95,150);

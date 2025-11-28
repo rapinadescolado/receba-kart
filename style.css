@@ -28,11 +28,17 @@ body {
     --fou: #548377;
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
 
 
 /* - - - - - Game Screen - - - - - */
 #gamescreen {
-    border: 2px solid black;
+    border: 3px solid var(--dark-3);
 }
 #map {
     position: fixed;
@@ -56,7 +62,31 @@ body {
     background-color: var(--dark-2);
 }
 .player-card {
+    position: relative;
+    border-radius: 15px;
+    margin: 0.5vh 1vw;
     background-color: white;
+}
+.player-card img.profile-icon {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 4vw;
+    border-radius: 100%;
+}
+.player-card h2 {
+    position: absolute;
+    left: 15%;
+    letter-spacing: 0.2vw;
+    font-size: 24px;
+}
+.player-card h3 {
+    position: absolute;
+    top: 25%;
+    left: 14%;
+    letter-spacing: 0.05vw;
+    font-size: 20px;
+    color: var(--fou);
 }
 
 #cameras {
