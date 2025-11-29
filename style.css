@@ -121,6 +121,7 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 50px;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
+    border-top: black solid 3px;
     background-color: red;
     transform: translate(975px,975px);
 }
